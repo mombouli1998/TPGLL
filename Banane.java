@@ -2,7 +2,7 @@
  *
  * @author roudet
  */
-public class Banane {
+public class Banane implements Fruit{
     private double prix;
     private String origine;
 
@@ -12,7 +12,7 @@ public class Banane {
         this.origine="Espagne";
     }
 
-    public Orange(double prix, String origine)
+    public Banane(double prix, String origine)
     {
 	if(prix < 0)
 	    this.prix = -prix;  //une solution possible pour interdire les prix negatifs
@@ -35,7 +35,7 @@ public class Banane {
 
     public String getOrigine(){
 	return origine;
-    }
+}
 
     public void setOrigine(String origine){
 	this.origine=origine;
@@ -65,6 +65,6 @@ public class Banane {
 Banane  o= new Banane();
         o.setPrix(55);
         o.setOrigine("Congo");
-	System.out.println(o.toString(n));
+	System.out.println(o.toString());
    }
 }
